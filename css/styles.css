@@ -1,0 +1,91 @@
+/* Estilos personalizados adicionales */
+
+/* Mejorar la tabla en dispositivos móviles */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.875rem;
+    }
+    
+    th, td {
+        padding: 0.5rem 0.25rem !important;
+    }
+    
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+/* Estilos para radio buttons más grandes en móvil */
+@media (max-width: 640px) {
+    input[type="radio"] {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
+/* Animación para el envío del formulario */
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Estilo para inputs required con mejor UX */
+input:required:invalid,
+textarea:required:invalid {
+    box-shadow: none;
+}
+
+input:required:valid,
+textarea:required:valid {
+    border-color: #10b981;
+}
+
+/* Mejorar el aspecto de los textarea */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animación de carga */
+.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Estilos para validación de formulario */
+.error-message {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.field-error {
+    border-color: #dc2626 !important;
+}
+
+/* Mejora del contraste en las filas de la tabla */
+tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+/* Estilos para impresión */
+@media print {
+    .no-print {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .shadow-md {
+        box-shadow: none !important;
+        border: 1px solid #e5e7eb;
+    }
+}

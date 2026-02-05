@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST - Funciones JavaScript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <script>
+    // JavaScript inline ANTES del formulario
+    function toggleSociescuelaQuestions() {
+        alert('Funcion toggleSociescuelaQuestions llamada correctamente!');
+        const soci1 = document.querySelector('input[name="soci_1"]:checked');
+        console.log('Valor seleccionado:', soci1 ? soci1.value : 'ninguno');
+    }
+    </script>
+
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2 text-center">
+                Prueba de Funcion JavaScript
+            </h1>
+        </div>
+
+        <div class="bg-blue-600 text-white rounded-lg shadow-md p-4 mb-6">
+            <h2 class="text-2xl font-bold text-center">TEST</h2>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">
+                Haz clic en Si o No - Debe aparecer una alerta
+            </h2>
+            <div class="flex gap-6">
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="soci_1" value="1" class="w-4 h-4" onchange="toggleSociescuelaQuestions()">
+                    <span class="text-gray-700">Si</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="soci_1" value="0" class="w-4 h-4" onchange="toggleSociescuelaQuestions()">
+                    <span class="text-gray-700">No</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Instrucciones:</h2>
+            <ol class="list-decimal ml-6 space-y-2 text-gray-700">
+                <li>Abre la consola del navegador (F12)</li>
+                <li>Ve a la pestana Console</li>
+                <li>Escribe: <code class="bg-gray-100 px-2 py-1">typeof toggleSociescuelaQuestions</code></li>
+                <li>Debe decir: <strong>function</strong></li>
+                <li>Luego haz clic en Si o No arriba</li>
+                <li>Debe aparecer una alerta</li>
+            </ol>
+            
+            <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded">
+                <p class="font-bold text-yellow-800">Si esto funciona:</p>
+                <p class="text-yellow-700">El problema esta en el archivo index.php (probablemente codificacion UTF-8 corrupta)</p>
+            </div>
+            
+            <div class="mt-4 p-4 bg-red-50 border border-red-200 rounded">
+                <p class="font-bold text-red-800">Si esto NO funciona:</p>
+                <p class="text-red-700">Hay un problema mas profundo con la configuracion de Laragon/Apache</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

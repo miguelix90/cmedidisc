@@ -1,0 +1,58 @@
+# ============================================================================
+# .gitignore para el proyecto del cuestionario
+# ============================================================================
+
+# Archivos de configuración con credenciales sensibles
+config.php
+
+# Logs
+logs/
+*.log
+
+# Archivos de prueba (no subir a producción)
+test_conexion.php
+test_*.php
+
+# Archivos temporales de PHP
+*.tmp
+*.temp
+
+# Archivos de sesión
+/tmp/
+sessions/
+
+# Backups de base de datos
+*.sql.gz
+*.sql.zip
+backup/
+backups/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (si usas npm)
+node_modules/
+
+# Vendor (si usas Composer)
+vendor/
+
+# Archivos de entorno
+.env
+.env.local
+.env.production
+
+# Carpetas de caché
+cache/
+*.cache
+
+/documentos
+
