@@ -3,7 +3,7 @@
  * CONFIGURACIÓN DE LA BASE DE DATOS
  * 
  * Este archivo contiene la configuración de conexión a MySQL
- * IMPORTANTE: No subir este archivo a repositorios públicos
+ * IMPORTANTE: rellenar con los datos correctos y quitar el sufijo _demo antes de subir a producción
  */
 
 // ============================================================================

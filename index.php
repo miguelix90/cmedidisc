@@ -60,39 +60,7 @@
             resultadoTextarea.value = '';
         }
     }
-    function checkMetodologiasActivasVisibility() {
-        const medidasRadios = document.querySelectorAll('.medida-radio:checked');
-        let algunaMedidaDiferenteDeNunca = false;
-        medidasRadios.forEach(radio => {
-            if (radio.value !== '1') {
-                algunaMedidaDiferenteDeNunca = true;
-            }
-        });
-        const metodologiasContainer = document.getElementById('disci_6_container');
-        if (algunaMedidaDiferenteDeNunca) {
-            metodologiasContainer.style.display = 'block';
-        } else {
-            metodologiasContainer.style.display = 'none';
-            document.querySelectorAll('#disci_6_container input[type="radio"]').forEach(r => r.checked = false);
-            const especificar = document.querySelector('input[name="disci_6_otro_especificar"]');
-            if (especificar) especificar.value = '';
-        }
-    }
-    
-    // FORZAR CARGA DE ELEMENTOS EN EL DOM AL INICIO
-    document.addEventListener('DOMContentLoaded', function() {
-        const cont = document.getElementById('disci_6_container');
-        if (cont) {
-            cont.style.display = 'block';
-            cont.style.visibility = 'hidden';
-            cont.style.position = 'absolute';
-            setTimeout(() => {
-                cont.style.display = 'none';
-                cont.style.visibility = '';
-                cont.style.position = '';
-            }, 10);
-        }
-    });
+    // Función checkMetodologiasActivasVisibility eliminada - La pregunta 6 se muestra siempre
     </script>
     <?php
     // Incluir configuración para acceder a la función de validación
@@ -358,7 +326,7 @@
                             </tr>
                             <tr>
                                 <td class="border border-gray-300 px-4 py-3 text-gray-700">Amonestaciones escritas</td>
-                                <td class="border border-gray-300 px-2 py-3 text-center"><input type="radio" name="disci_1_amonestaciones_escritas" value="1"  class="w-4 h-4 medida-radio" onchange="checkMetodologiasActivasVisibility()"></td>
+                                <td class="border border-gray-300 px-2 py-3 text-center"><input type="radio" name="disci_1_amonestaciones_escritas" value="1"  class="w-4 h-4 medida-radio"></td>
                                 <td class="border border-gray-300 px-2 py-3 text-center"><input type="radio" name="disci_1_amonestaciones_escritas" value="2"  class="w-4 h-4 medida-radio" onchange="checkMetodologiasActivasVisibility()"></td>
                                 <td class="border border-gray-300 px-2 py-3 text-center"><input type="radio" name="disci_1_amonestaciones_escritas" value="3"  class="w-4 h-4 medida-radio" onchange="checkMetodologiasActivasVisibility()"></td>
                                 <td class="border border-gray-300 px-2 py-3 text-center"><input type="radio" name="disci_1_amonestaciones_escritas" value="4"  class="w-4 h-4 medida-radio" onchange="checkMetodologiasActivasVisibility()"></td>
@@ -701,8 +669,8 @@
                 ></textarea>
             </div>
 
-            <!-- DISCI_6 (CONDICIONAL - solo si alguna medida disci_1 es diferente de "nunca" -->
-            <div id="disci_6_container" class="bg-white rounded-lg shadow-md p-6" style="display: none;">
+            <!-- DISCI_6 -->
+            <div id="disci_6_container" class="bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-xl font-bold text-gray-900 mb-4">
                     6. Indique en qué nivel se aplican estas metodologías activas en su centro:
                 </h2>
